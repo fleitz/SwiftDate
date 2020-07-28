@@ -404,9 +404,9 @@ public extension DateInRegion {
 		case .endOfWeek:
 			return dateAt(.startOfWeek).dateByAdding(7, .day).dateByAdding(-1, .second)
 		case .startOfMonth:
-			return dateBySet([.day: 1, .hour: 1, .minute: 1, .second: 1, .nanosecond: 1])!
+			return dateAtStartOf(.month)
 		case .endOfMonth:
-			return dateByAdding((monthDays - day), .day).dateAtEndOf(.day)
+			return dateAtEndOf(.month)
 		case .tomorrow:
 			return dateByAdding(1, .day)
 		case .tomorrowAtStart:
